@@ -6,6 +6,23 @@
     <title>Javascript Starter</title>
 </head>
 <body>
-    <script src="src/app.js"></script>
+    <div>
+        <script src="src/app.js"></script>
+        <h1>Hello World!</h1>
+        <h1>Current date and time:</h1>
+        <span id="datetime"></span>
+
+        <script>
+            function updateDateTime() {
+            const now = new Date();
+
+            const currentDateTime = now.toLocaleString();
+
+            document.querySelector('#datetime').textContent = currentDateTime;
+        }
+        setInterval(updateDateTime, 1000);
+        </script>
+    </div>
+    
 </body>
 </html> 
